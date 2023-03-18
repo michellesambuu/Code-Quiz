@@ -30,23 +30,25 @@ var questionArray = [
             "Javascript",
             "terminal bash",
             "for loop",
-            "consol.log"
+            "console.log"
         ],
-        correctIndex: 1
-
-       
+        correctIndex: 3  
     },
     {
-        text: "Commonly used data types DO Not include:",
+        text: "111111:",
         choices: [
-            "strings",
-            "booleans",
-            "alerts",
-            "numbers"
+            "Javascript",
+            "terminal bash",
+            "for loop",
+            "consol.log"
         ],
-        correctIndex: 
+        correctIndex: 1  
     }
+
 ]
+var secondsLeft= 30;
+var timeEl = document.querySelector("#time")
+var timerInterval;
 
 
 function showCurrentQuestion() {
@@ -98,7 +100,31 @@ function nextQuestion() {
 }
 
 function endQuiz() {
+     // Stops execution of action at set interval
+     clearInterval(timerInterval);
     console.log("quiz over")
+    var endScoreHTML = `
+    <p> quiz over your higest score ${score}</p>
+  
+    `
+    questionEl.innerHTML = endScoreHTML
 }
 
 showCurrentQuestion()
+
+function setTime() {
+    // Sets interval in variable
+      timerInterval = setInterval(function() {
+      secondsLeft--;
+      timeEl.textContent = secondsLeft;
+  
+      if(secondsLeft === 0) {
+       
+        // Calls function to create and append image
+        endQuiz();
+      }
+  
+    }, 1000);
+    
+  }
+  setTime()

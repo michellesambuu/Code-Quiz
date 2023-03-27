@@ -32,17 +32,27 @@ var questionArray = [
             "for loop",
             "console.log"
         ],
-        correctIndex: 3  
+        correctIndex: 2  
     },
     {
-        text: "111111:",
+        text: "Inside which HTML element do we put the JavaScript? ",
         choices: [
             "Javascript",
-            "terminal bash",
-            "for loop",
-            "consol.log"
+            "script",
+            "js",
+            "scripting"
         ],
         correctIndex: 1  
+    },
+    {
+        text: "How do you create a function in JavaScript?",
+        choices: [
+            "function myFunction()  ",
+            "function = myFunction()",
+            "function:myFunction()",
+            "function,myFunction{}"
+        ],
+        correctIndex: 0 
     }
 
 ]
